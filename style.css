@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: #f0f2f5;
+}
+
+h1 {
+    color: #1e3c72;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: black;
+}
+
+button {
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background: #2a4a7a;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.peer-id {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.qr {
+    margin: 20px 0;
+}
+
+.fallback {
+    color: #666;
+    margin-top: 20px;
+}

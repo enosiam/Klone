@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📱 Phone Screen Mirror</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PeerJS and QR Code libraries -->
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📲 Screen Mirror</h1>
+
+        <!-- Receiver (TV / Laptop) UI -->
+        <div id="receiverView">
+            <h2>Receiver (TV / Laptop)</h2>
+            <button onclick="startReceiving()">🖥️ Start Receiving</button>
+            <div id="receiverPeerId" class="peer-id"></div>
+            <div id="qrContainer" class="qr"></div>
+            <video id="remoteVideo" autoplay playsinline muted></video>
+        </div>
+
+        <!-- Sender (Phone) UI -->
+        <div id="senderView" style="display: none;">
+            <h2>Sender (Phone)</h2>
+            <p>Enter the Receiver ID shown on the other device:</p>
+            <input type="text" id="receiverIdInput" placeholder="e.g. peer-123456">
+            <button onclick="startSending()">📤 Start Mirroring</button>
+            <video id="localVideo" autoplay playsinline muted style="display: none;"></video>
+            <p id="mirrorStatus"></p>
+        </div>
+
+        <!-- iOS / Fallback Notice -->
+        <div class="fallback">
+            <hr>
+            <p><strong>⚠️ iOS / Safari:</strong> Screen capture is not supported. Use the camera fallback: <br>
+            after clicking "Start Mirroring", choose "Camera" instead of "Screen".</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
